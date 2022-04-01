@@ -75,7 +75,7 @@ class RawKeyEventDataMacOs extends RawKeyEventData {
   /// deriving from raw data.
   ///
   /// The macOS embedding detects the keyboard layout and maps some keys to
-  /// logical keys in a way that can not be derived from per-key information.
+  /// logical keys in a way that cannot be derived from per-key information.
   ///
   /// This is not part of the native macOS key event.
   final int? specifiedLogicalKey;
