@@ -13919,6 +13919,53 @@ void main() {
       );
     });
   });
+
+  testWidgets('Autofill enabled by default', (WidgetTester tester) async {
+    final FocusNode focusNode = FocusNode();
+    await tester.pumpWidget(
+      MaterialApp(
+        home: EditableText(
+          autofocus: true,
+          controller: TextEditingController(text: 'A'),
+          focusNode: focusNode,
+          style: textStyle,
+          cursorColor: Colors.blue,
+          backgroundCursorColor: Colors.grey,
+          cursorOpacityAnimates: true,
+        ),
+      ),
+    );
+
+    assert(focusNode.hasFocus);
+    expect(
+      tester.testTextInput.log,
+      contains(matchesMethodCall('TextInput.requestAutofill')),
+    );
+  });
+
+  testWidgets('Autofill can be disabled', (WidgetTester tester) async {
+    final FocusNode focusNode = FocusNode();
+    await tester.pumpWidget(
+      MaterialApp(
+        home: EditableText(
+          autofocus: true,
+          controller: TextEditingController(text: 'A'),
+          focusNode: focusNode,
+          style: textStyle,
+          cursorColor: Colors.blue,
+          backgroundCursorColor: Colors.grey,
+          cursorOpacityAnimates: true,
+          autofillHints: null,
+        ),
+      ),
+    );
+
+    assert(focusNode.hasFocus);
+    expect(
+      tester.testTextInput.log,
+      isNot(contains(matchesMethodCall('TextInput.requestAutofill'))),
+    );
+  });
 }
 
 class UnsettableController extends TextEditingController {

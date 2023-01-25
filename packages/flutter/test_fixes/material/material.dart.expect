@@ -297,10 +297,43 @@ void main() {
   final MaterialScrollBehavior materialScrollBehavior = MaterialScrollBehavior();
   materialScrollBehavior.buildOverscrollIndicator(context, child, axisDirection);
 
+<<<<<<< HEAD:packages/flutter/test_fixes/material/material.dart.expect
   // Changes made in https://github.com/flutter/flutter/pull/111706
   Scrollbar scrollbar = Scrollbar(trackVisibility: true);
   bool nowShowing = scrollbar.trackVisibility;
   ScrollbarThemeData scrollbarTheme = ScrollbarThemeData(trackVisibility: nowShowing);
   scrollbarTheme.copyWith(trackVisibility: nowShowing);
   scrollbarTheme.trackVisibility;
+=======
+  AppBarTheme appBarTheme = AppBarTheme();
+  appBarTheme = AppBarTheme();
+  appBarTheme = AppBarTheme();
+  appBarTheme = appBarTheme.copyWith();
+  appBarTheme = appBarTheme.copyWith();
+  appBarTheme.backwardsCompatibility; // Removing field reference not supported.
+
+  AppBarTheme appBarTheme = AppBarTheme();
+  appBarTheme.backgroundColor;
+
+  // Changes made in https://github.com/flutter/flutter/pull/93396
+  ThemeData themeData = ThemeData();
+  themeData = ThemeData();
+  themeData = ThemeData.raw();
+  themeData = themeData.copyWith();
+  themeData.primaryColorBrightness; // Removing field reference not supported.
+
+  // Changes made in https://github.com/flutter/flutter/pull/93427
+  ColorScheme colorScheme = ColorScheme();
+  colorScheme = ColorScheme();
+  colorScheme = ColorScheme.light();
+  colorScheme = ColorScheme.dark();
+  colorScheme = ColorScheme.highContrastLight();
+  colorScheme = ColorScheme.highContrastDark();
+  colorScheme = colorScheme.copyWith();
+  colorScheme.primaryContainer;
+  colorScheme.secondaryContainer;
+
+  // Changes made in https://github.com/flutter/flutter/pull/96115
+  Icon icon = Icons.pie_chart_outline;
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5:packages/flutter/test_fixes/material.dart.expect
 }

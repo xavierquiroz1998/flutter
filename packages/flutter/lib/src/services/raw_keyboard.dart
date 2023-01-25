@@ -532,9 +532,14 @@ abstract class RawKeyEvent with Diagnosticable {
     super.debugFillProperties(properties);
     properties.add(DiagnosticsProperty<LogicalKeyboardKey>('logicalKey', logicalKey));
     properties.add(DiagnosticsProperty<PhysicalKeyboardKey>('physicalKey', physicalKey));
+<<<<<<< HEAD
     if (this is RawKeyDownEvent) {
       properties.add(DiagnosticsProperty<bool>('repeat', repeat));
     }
+=======
+    if (this is RawKeyDownEvent)
+      properties.add(DiagnosticsProperty<bool>('repeat', repeat));
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
   }
 }
 
@@ -546,10 +551,17 @@ abstract class RawKeyEvent with Diagnosticable {
 class RawKeyDownEvent extends RawKeyEvent {
   /// Creates a key event that represents the user pressing a key.
   const RawKeyDownEvent({
+<<<<<<< HEAD
     required super.data,
     super.character,
     super.repeat,
   });
+=======
+    required RawKeyEventData data,
+    String? character,
+    bool repeat = false,
+  }) : super(data: data, character: character, repeat: repeat);
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
 }
 
 /// The user has released a key on the keyboard.
@@ -560,9 +572,15 @@ class RawKeyDownEvent extends RawKeyEvent {
 class RawKeyUpEvent extends RawKeyEvent {
   /// Creates a key event that represents the user releasing a key.
   const RawKeyUpEvent({
+<<<<<<< HEAD
     required super.data,
     super.character,
   }) : super(repeat: false);
+=======
+    required RawKeyEventData data,
+    String? character,
+  }) : super(data: data, character: character, repeat: false);
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
 }
 
 /// A callback type used by [RawKeyboard.keyEventHandler] to send key events to

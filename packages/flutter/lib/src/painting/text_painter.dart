@@ -19,6 +19,7 @@ import 'dart:ui' as ui
         TextStyle,
         BoxHeightStyle,
         BoxWidthStyle;
+<<<<<<< HEAD
 =======
 import 'dart:math' show max, min;
 import 'dart:ui' as ui show
@@ -33,6 +34,8 @@ import 'dart:ui' as ui show
   TextHeightBehavior,
   TextStyle;
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -237,6 +240,7 @@ class TextPainter {
         _strutStyle = strutStyle,
         _textWidthBasis = textWidthBasis,
         _textHeightBehavior = textHeightBehavior;
+<<<<<<< HEAD
 
   /// Computes the width of a configured [TextPainter].
   ///
@@ -321,6 +325,8 @@ class TextPainter {
       painter.dispose();
     }
   }
+=======
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
 
   // _paragraph being null means the text needs layout because of style changes.
   // Setting _paragraph to null invalidates all the layout cache.
@@ -380,6 +386,7 @@ class TextPainter {
   set text(InlineSpan? value) {
     assert(value == null || value.debugAssertIsValid());
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (_text == value) return;
     if (_text?.style != value?.style) _layoutTemplate = null;
 =======
@@ -391,6 +398,10 @@ class TextPainter {
       _layoutTemplate = null;
     }
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+    if (_text == value) return;
+    if (_text?.style != value?.style) _layoutTemplate = null;
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
 
     final RenderComparison comparison = value == null
         ? RenderComparison.layout
@@ -428,12 +439,16 @@ class TextPainter {
   set textAlign(TextAlign value) {
     assert(value != null);
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (_textAlign == value) return;
 =======
     if (_textAlign == value) {
       return;
     }
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+    if (_textAlign == value) return;
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     _textAlign = value;
     markNeedsLayout();
   }
@@ -457,11 +472,15 @@ class TextPainter {
   TextDirection? _textDirection;
   set textDirection(TextDirection? value) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     if (_textDirection == value) return;
     _textDirection = value;
     markNeedsLayout();
     _layoutTemplate =
         null; // Shouldn't really matter, but for strict correctness...
+<<<<<<< HEAD
 =======
     if (_textDirection == value) {
       return;
@@ -471,6 +490,8 @@ class TextPainter {
     _layoutTemplate?.dispose();
     _layoutTemplate = null; // Shouldn't really matter, but for strict correctness...
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
   }
 
   /// The number of font pixels for each logical pixel.
@@ -484,12 +505,16 @@ class TextPainter {
   set textScaleFactor(double value) {
     assert(value != null);
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (_textScaleFactor == value) return;
 =======
     if (_textScaleFactor == value) {
       return;
     }
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+    if (_textScaleFactor == value) return;
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     _textScaleFactor = value;
     markNeedsLayout();
     _layoutTemplate?.dispose();
@@ -517,12 +542,16 @@ class TextPainter {
   set ellipsis(String? value) {
     assert(value == null || value.isNotEmpty);
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (_ellipsis == value) return;
 =======
     if (_ellipsis == value) {
       return;
     }
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+    if (_ellipsis == value) return;
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     _ellipsis = value;
     markNeedsLayout();
   }
@@ -532,12 +561,16 @@ class TextPainter {
   Locale? _locale;
   set locale(Locale? value) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (_locale == value) return;
 =======
     if (_locale == value) {
       return;
     }
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+    if (_locale == value) return;
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     _locale = value;
     markNeedsLayout();
   }
@@ -556,12 +589,16 @@ class TextPainter {
   set maxLines(int? value) {
     assert(value == null || value > 0);
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (_maxLines == value) return;
 =======
     if (_maxLines == value) {
       return;
     }
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+    if (_maxLines == value) return;
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     _maxLines = value;
     markNeedsLayout();
   }
@@ -582,12 +619,16 @@ class TextPainter {
   StrutStyle? _strutStyle;
   set strutStyle(StrutStyle? value) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (_strutStyle == value) return;
 =======
     if (_strutStyle == value) {
       return;
     }
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+    if (_strutStyle == value) return;
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     _strutStyle = value;
     markNeedsLayout();
   }
@@ -600,12 +641,16 @@ class TextPainter {
   set textWidthBasis(TextWidthBasis value) {
     assert(value != null);
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (_textWidthBasis == value) return;
 =======
     if (_textWidthBasis == value) {
       return;
     }
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+    if (_textWidthBasis == value) return;
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     _textWidthBasis = value;
     markNeedsLayout();
   }
@@ -615,12 +660,16 @@ class TextPainter {
   ui.TextHeightBehavior? _textHeightBehavior;
   set textHeightBehavior(ui.TextHeightBehavior? value) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (_textHeightBehavior == value) return;
 =======
     if (_textHeightBehavior == value) {
       return;
     }
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+    if (_textHeightBehavior == value) return;
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     _textHeightBehavior = value;
     markNeedsLayout();
   }
@@ -712,6 +761,7 @@ class TextPainter {
       _createParagraphStyle(TextDirection.rtl),
     ); // direction doesn't matter, text is just a space
 <<<<<<< HEAD
+<<<<<<< HEAD
     final ui.TextStyle? textStyle =
         text?.style?.getTextStyle(textScaleFactor: textScaleFactor);
     if (textStyle != null) builder.pushStyle(textStyle);
@@ -721,6 +771,11 @@ class TextPainter {
       builder.pushStyle(textStyle);
     }
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+    final ui.TextStyle? textStyle =
+        text?.style?.getTextStyle(textScaleFactor: textScaleFactor);
+    if (textStyle != null) builder.pushStyle(textStyle);
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     builder.addText(' ');
     return builder.build()
       ..layout(const ui.ParagraphConstraints(width: double.infinity));
@@ -893,11 +948,15 @@ class TextPainter {
     // Return early if the current layout information is not outdated, even if
     // _needsPaint is true (in which case _paragraph will be rebuilt in paint).
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     if (_paragraph != null &&
         minWidth == _lastMinWidth &&
         maxWidth == _lastMaxWidth) return;
 
     if (_rebuildParagraphForPaint || _paragraph == null) _createParagraph();
+<<<<<<< HEAD
 =======
     if (_paragraph != null && minWidth == _lastMinWidth && maxWidth == _lastMaxWidth) {
       return;
@@ -907,6 +966,8 @@ class TextPainter {
       _createParagraph();
     }
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     _lastMinWidth = minWidth;
     _lastMaxWidth = maxWidth;
     // A change in layout invalidates the cached caret and line metrics as well.
@@ -979,12 +1040,16 @@ class TextPainter {
   int? getOffsetAfter(int offset) {
     final int? nextCodeUnit = _text!.codeUnitAt(offset);
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (nextCodeUnit == null) return null;
 =======
     if (nextCodeUnit == null) {
       return null;
     }
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+    if (nextCodeUnit == null) return null;
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     // TODO(goderbauer): doesn't handle extended grapheme clusters with more than one Unicode scalar value (https://github.com/flutter/flutter/issues/13404).
     return _isUtf16Surrogate(nextCodeUnit) ? offset + 2 : offset + 1;
   }
@@ -994,12 +1059,16 @@ class TextPainter {
   int? getOffsetBefore(int offset) {
     final int? prevCodeUnit = _text!.codeUnitAt(offset - 1);
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (prevCodeUnit == null) return null;
 =======
     if (prevCodeUnit == null) {
       return null;
     }
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+    if (prevCodeUnit == null) return null;
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     // TODO(goderbauer): doesn't handle extended grapheme clusters with more than one Unicode scalar value (https://github.com/flutter/flutter/issues/13404).
     return _isUtf16Surrogate(prevCodeUnit) ? offset - 2 : offset - 1;
   }
@@ -1015,6 +1084,7 @@ class TextPainter {
         _text!.toPlainText(includeSemanticsLabels: false);
     final int? prevCodeUnit = _text!.codeUnitAt(max(0, offset - 1));
     if (prevCodeUnit == null) return null;
+<<<<<<< HEAD
 =======
     final int plainTextLength = plainText.length;
     if (plainTextLength == 0 || offset > plainTextLength) {
@@ -1022,6 +1092,8 @@ class TextPainter {
     }
     final int prevCodeUnit = plainText.codeUnitAt(max(0, offset - 1));
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
 
     // If the upstream character is a newline, cursor is at start of next line
     const int NEWLINE_CODE_UNIT = 10;
@@ -1064,16 +1136,22 @@ class TextPainter {
 
       final double caretEnd = box.end;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
       final double dx = box.direction == TextDirection.rtl
           ? caretEnd - caretPrototype.width
           : caretEnd;
       return Rect.fromLTRB(dx.clamp(0, _paragraph!.width), box.top,
           dx.clamp(0, _paragraph!.width), box.bottom);
+<<<<<<< HEAD
 =======
       final double dx = box.direction == TextDirection.rtl ? caretEnd - caretPrototype.width : caretEnd;
       return Rect.fromLTRB(clampDouble(dx, 0, _paragraph!.width), box.top,
           clampDouble(dx, 0, _paragraph!.width), box.bottom);
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     }
     return null;
   }
@@ -1088,6 +1166,7 @@ class TextPainter {
     final int? nextCodeUnit =
         _text!.codeUnitAt(min(offset, flattenedText.length - 1));
     if (nextCodeUnit == null) return null;
+<<<<<<< HEAD
 =======
     final int plainTextLength = plainText.length;
     if (plainTextLength == 0 || offset < 0) {
@@ -1097,6 +1176,8 @@ class TextPainter {
     final int nextCodeUnit = plainText.codeUnitAt(min(offset, plainTextLength - 1));
 
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     // Check for multi-code-unit glyphs such as emojis or zero width joiner
     final bool needsSearch = _isUtf16Surrogate(nextCodeUnit) ||
         nextCodeUnit == _zwjUtf16 ||
@@ -1129,15 +1210,21 @@ class TextPainter {
       final TextBox box = boxes.last;
       final double caretStart = box.start;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
       final double dx = box.direction == TextDirection.rtl
           ? caretStart - caretPrototype.width
           : caretStart;
       return Rect.fromLTRB(dx.clamp(0, _paragraph!.width), box.top,
           dx.clamp(0, _paragraph!.width), box.bottom);
+<<<<<<< HEAD
 =======
       final double dx = box.direction == TextDirection.rtl ? caretStart - caretPrototype.width : caretStart;
       return Rect.fromLTRB(clampDouble(dx, 0, _paragraph!.width), box.top, clampDouble(dx, 0, _paragraph!.width), box.bottom);
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     }
     return null;
   }
@@ -1208,12 +1295,15 @@ class TextPainter {
     assert(!_debugNeedsLayout);
     if (position == _previousCaretPosition &&
         caretPrototype == _previousCaretPrototype) return;
+<<<<<<< HEAD
 =======
     assert(_debugAssertTextLayoutIsValid);
     if (position == _previousCaretPosition && caretPrototype == _previousCaretPrototype) {
       return;
     }
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     final int offset = position.offset;
     assert(position.affinity != null);
     Rect? rect;
@@ -1319,6 +1409,7 @@ class TextPainter {
 <<<<<<< HEAD
     assert(!_debugNeedsLayout);
     return _lineMetricsCache ??= _paragraph!.computeLineMetrics();
+<<<<<<< HEAD
 =======
     assert(_debugAssertTextLayoutIsValid);
     return _lineMetricsCache ??= _paragraph!.computeLineMetrics();
@@ -1352,5 +1443,7 @@ class TextPainter {
     _paragraph = null;
     _text = null;
 >>>>>>> b06b8b2710955028a6b562f5aa6fe62941d6febf
+=======
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
   }
 }

@@ -391,7 +391,11 @@ class ShortcutMapProperty extends DiagnosticsProperty<Map<ShortcutActivator, Int
 ///
 ///  * [CharacterActivator], an activator that represents key combinations
 ///    that result in the specified character, such as question mark.
+<<<<<<< HEAD
 class SingleActivator with Diagnosticable, MenuSerializableShortcut implements ShortcutActivator {
+=======
+class SingleActivator with Diagnosticable implements ShortcutActivator {
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
   /// Triggered when the [trigger] key is pressed while the modifiers are held.
   ///
   /// The [trigger] should be the non-modifier key that is pressed after all the
@@ -495,8 +499,13 @@ class SingleActivator with Diagnosticable, MenuSerializableShortcut implements S
   /// Whether this activator accepts repeat events of the [trigger] key.
   ///
   /// If [includeRepeats] is true, the activator is checked on all
+<<<<<<< HEAD
   /// [RawKeyDownEvent] events for the [trigger] key. If [includeRepeats] is
   /// false, only [trigger] key events with a false [RawKeyDownEvent.repeat]
+=======
+  /// [RawKeyDownEvent] events for the [trigger] key. If `includeRepeats` is
+  /// false, only the [trigger] key events with a false [RawKeyDownEvent.repeat]
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
   /// attribute will be considered.
   final bool includeRepeats;
 
@@ -551,7 +560,11 @@ class SingleActivator with Diagnosticable, MenuSerializableShortcut implements S
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
+<<<<<<< HEAD
     properties.add(MessageProperty('keys', debugDescribeKeys()));
+=======
+    properties.add(DiagnosticsProperty<String>('keys', debugDescribeKeys()));
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     properties.add(FlagProperty('includeRepeats', value: includeRepeats, ifFalse: 'excluding repeats'));
   }
 }

@@ -734,6 +734,7 @@ void main() {
     layer.addToScene(builder);
     expect(layer.engineLayer, null);
   });
+<<<<<<< HEAD
 
   test('Layers describe clip bounds', () {
     ContainerLayer layer = ContainerLayer();
@@ -1027,6 +1028,8 @@ void main() {
 
     expect(platformViewLayer.supportsRasterization(), false);
   });
+=======
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
 }
 
 class FakeEngineLayer extends Fake implements EngineLayer {

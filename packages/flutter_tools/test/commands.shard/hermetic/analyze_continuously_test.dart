@@ -253,7 +253,10 @@ void main() {
       platform: FakePlatform(),
       fileSystem: fileSystem,
       processManager: processManager,
+<<<<<<< HEAD
       allProjectValidators: <ProjectValidator>[],
+=======
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     );
 
     await FakeAsync().run((FakeAsync time) async {

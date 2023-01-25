@@ -101,8 +101,13 @@ void main() {
 
     testWithoutContext('Flutter Windows desktop help string', () {
       expect(flutterWindowsDesktopFeature.generateHelpMessage(),
+<<<<<<< HEAD
       'Enable or disable support for desktop on Windows. '
       'This setting will take effect on the master, beta, and stable channels.');
+=======
+      'Enable or disable beta-quality support for desktop on Windows. '
+      'This setting will take effect on the master, dev, beta, and stable channels.');
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5
     });
 
     testWithoutContext('help string on multiple channels', () {

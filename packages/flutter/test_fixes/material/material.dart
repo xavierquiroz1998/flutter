@@ -301,10 +301,43 @@ void main() {
   final MaterialScrollBehavior materialScrollBehavior = MaterialScrollBehavior();
   materialScrollBehavior.buildViewportChrome(context, child, axisDirection);
 
+<<<<<<< HEAD:packages/flutter/test_fixes/material/material.dart
   // Changes made in https://github.com/flutter/flutter/pull/111706
   Scrollbar scrollbar = Scrollbar(showTrackOnHover: true);
   bool nowShowing = scrollbar.showTrackOnHover;
   ScrollbarThemeData scrollbarTheme = ScrollbarThemeData(showTrackOnHover: nowShowing);
   scrollbarTheme.copyWith(showTrackOnHover: nowShowing);
   scrollbarTheme.showTrackOnHover;
+=======
+  AppBarTheme appBarTheme = AppBarTheme();
+  appBarTheme = AppBarTheme(backwardsCompatibility: true);
+  appBarTheme = AppBarTheme(backwardsCompatibility: false);
+  appBarTheme = appBarTheme.copyWith(backwardsCompatibility: true);
+  appBarTheme = appBarTheme.copyWith(backwardsCompatibility: false);
+  appBarTheme.backwardsCompatibility; // Removing field reference not supported.
+
+  AppBarTheme appBarTheme = AppBarTheme();
+  appBarTheme.color;
+
+  // Changes made in https://github.com/flutter/flutter/pull/93396
+  ThemeData themeData = ThemeData();
+  themeData = ThemeData(primaryColorBrightness: Brightness.dark);
+  themeData = ThemeData.raw(primaryColorBrightness: Brightness.dark);
+  themeData = themeData.copyWith(primaryColorBrightness: Brightness.dark);
+  themeData.primaryColorBrightness; // Removing field reference not supported.
+
+  // Changes made in https://github.com/flutter/flutter/pull/93427
+  ColorScheme colorScheme = ColorScheme();
+  colorScheme = ColorScheme(primaryVariant: Colors.black, secondaryVariant: Colors.white);
+  colorScheme = ColorScheme.light(primaryVariant: Colors.black, secondaryVariant: Colors.white);
+  colorScheme = ColorScheme.dark(primaryVariant: Colors.black, secondaryVariant: Colors.white);
+  colorScheme = ColorScheme.highContrastLight(primaryVariant: Colors.black, secondaryVariant: Colors.white);
+  colorScheme = ColorScheme.highContrastDark(primaryVariant: Colors.black, secondaryVariant: Colors.white);
+  colorScheme = colorScheme.copyWith(primaryVariant: Colors.black, secondaryVariant: Colors.white);
+  colorScheme.primaryVariant;
+  colorScheme.secondaryVariant;
+
+  // Changes made in https://github.com/flutter/flutter/pull/96115
+  Icon icon = Icons.pie_chart_outlined;
+>>>>>>> edac1cac236c399b385343f946d2592a173fd4a5:packages/flutter/test_fixes/material.dart
 }
